@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sensorList">
+        <item>Accelerometer</item>
+        <item>Gravity</item>
+        <item>Gyroscope</item>
+        <item>Light</item>
+        <item>Linear Acceleration</item>
+        <item>Magnetic Field</item>
+        <item>Orientation</item>
+        <item>Rotation Vector</item>
+        <item>Significant Motion</item>
+    </string-array>
+</resources>

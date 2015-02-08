@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sensor Examples</string>
+    <string name="title_sensor_detail">Sensor Detail</string>
+    <string name="accelerometer_description">Measures the acceleration force in m\s2 that is applied to a device on all three physical axes (x, y, and z), including the force of gravity.</string>
+    <string name="gravity_description">The gravity sensor provides a three dimensional vector indicating the direction and magnitude of gravity</string>
+    <string name="gyroscop_description">The gyroscope measures the rate or rotation in rad/s around a device\'s x, y, and z axis. </string>
+    <string name="light_description">Measures the ambient light level (illumination) in lx.</string>
+    <string name="linear_accelerometer_description">Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), excluding the force of gravity.</string>
+    <string name="magnetic_field_description">Measures the ambient geomagnetic field for all three physical axes (x, y, z) in μT.</string>
+    <string name="orientation_description">Measures degrees of rotation that a device makes around all three physical axes (x, y, z)</string>
+    <string name="rotation_vector_description">Measures the orientation of a device by providing the three elements of the device\'s rotation vector.</string>
+    <string name="signif_motion_description">Significant Motion</string>
+
+    <string name="action_header">Available Actions</string>
+    <string name="result_header">Results</string>
+
+    <string name="read_button">Read Sensor</string>
+    <string name="background_button">Enable Background Reading</string>
+
+</resources>
