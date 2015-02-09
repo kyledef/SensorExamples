@@ -78,9 +78,8 @@ public abstract class SensorDetailFragment extends Fragment implements SensorEve
 
     @Override
     public void onPause() {
-        // unregister listener
         super.onPause();
-        sensorManager.unregisterListener(this);
+        sensorManager.unregisterListener(this); // unregister listener
         changeRegisteredState(false);
     }
 

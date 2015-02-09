@@ -8,6 +8,10 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +32,13 @@ public class GPSDetailFragment extends SensorDetailFragment implements LocationL
         super.onCreate(savedInstanceState);
         this.sensorDescription = getResources().getString(R.string.gravity_description);
         locationManager = (LocationManager) this.getActivity().getSystemService(Context.LOCATION_SERVICE);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+
+        return rootView;
     }
 
     @Override
@@ -65,7 +76,6 @@ public class GPSDetailFragment extends SensorDetailFragment implements LocationL
         ((TextView) getActivity().findViewById(R.id.result_line_2)).setText("Long: " + location.getLongitude());
         ((TextView) getActivity().findViewById(R.id.result_line_3)).setText("Alt: " + location.getAltitude());
         ((TextView) getActivity().findViewById(R.id.result_line_4)).setText("Accuracy: " + location.getAccuracy());
-        
     }
 
     @Override
