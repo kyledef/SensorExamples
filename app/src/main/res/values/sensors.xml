@@ -2,6 +2,7 @@
 <resources>
     <string-array name="sensorList">
         <item>Accelerometer</item>
+        <item>GPS</item>
         <item>Gravity</item>
         <item>Gyroscope</item>
         <item>Light</item>

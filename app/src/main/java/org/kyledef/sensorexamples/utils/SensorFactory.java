@@ -3,6 +3,7 @@ package org.kyledef.sensorexamples.utils;
 import android.support.v4.app.Fragment;
 
 import org.kyledef.sensorexamples.ui.senors.AccelerometerDetailFragment;
+import org.kyledef.sensorexamples.ui.senors.GPSDetailFragment;
 import org.kyledef.sensorexamples.ui.senors.GravityDetailFragment;
 import org.kyledef.sensorexamples.ui.senors.GyroscopeDetailFragment;
 import org.kyledef.sensorexamples.ui.senors.LightDetailFragment;
@@ -30,27 +31,30 @@ public class SensorFactory {
                 tempFrag = new AccelerometerDetailFragment();
                 break;
             case 1:
-                tempFrag = new GravityDetailFragment();
+                tempFrag = new GPSDetailFragment();
                 break;
             case 2:
-                tempFrag = new GyroscopeDetailFragment();
+                tempFrag = new GravityDetailFragment();
                 break;
             case 3:
-                tempFrag = new LightDetailFragment();
+                tempFrag = new GyroscopeDetailFragment();
                 break;
             case 4:
-                tempFrag = new LinearAccelDetailFragment();
+                tempFrag = new LightDetailFragment();
                 break;
             case 5:
-                tempFrag = new MagneticFieldDetailFragment();
+                tempFrag = new LinearAccelDetailFragment();
                 break;
             case 6:
-                tempFrag = new OrientationDetailFragment();
+                tempFrag = new MagneticFieldDetailFragment();
                 break;
             case 7:
-                tempFrag = new RotationDetailFragment();
+                tempFrag = new OrientationDetailFragment();
                 break;
             case 8:
+                tempFrag = new RotationDetailFragment();
+                break;
+            case 9:
                 tempFrag = new SigMotionDetailFragment();
                 break;
         }

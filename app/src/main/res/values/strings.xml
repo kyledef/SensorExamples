@@ -12,7 +12,8 @@
     <string name="orientation_description">Measures degrees of rotation that a device makes around all three physical axes (x, y, z)</string>
     <string name="rotation_vector_description">Measures the orientation of a device by providing the three elements of the device\'s rotation vector.</string>
     <string name="signif_motion_description">Significant Motion</string>
-
+    <string name="gps_description">GPS sensor uses the GPS sensor in the device to determine the location of the device.</string>
+    <string name="network_loc_description">The Network Location </string>
     <string name="action_header">Available Actions</string>
     <string name="result_header">Results</string>
 

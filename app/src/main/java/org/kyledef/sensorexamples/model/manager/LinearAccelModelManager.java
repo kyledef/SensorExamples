@@ -1,4 +1,4 @@
-package org.kyledef.sensorexamples.model;
+package org.kyledef.sensorexamples.model.manager;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 
-public class LinearAccelModel extends SensorModel {
+public class LinearAccelModelManager extends SensorModelManager {
 
     public static final String CREATE_TABLE =
             "CREATE TABLE IF NOT EXISTS " + LinearAccelEntry.TABLE_NAME + " (" +
@@ -27,10 +27,10 @@ public class LinearAccelModel extends SensorModel {
         public static final String TIME_TAKEN = "time_taken";
     }
 
-    public LinearAccelModel(SQLiteDatabase db) { super(db);  }
+    public LinearAccelModelManager(SQLiteDatabase db) { super(db);  }
 
     @Override
-    public boolean saveEntry(double[] values) {
+    public boolean saveEntry(float[] values) {
         return false;
     }
 
