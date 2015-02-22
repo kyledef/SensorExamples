@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nav_menu">
+        <item>Home</item>
+        <item>Sensors</item>
+        <item>Augmented Reality</item>
+        <item>Activity Recognition</item>
+        <item>Contextual Computing</item>
+    </string-array>
+</resources>

@@ -19,5 +19,28 @@
 
     <string name="read_button">Read Sensor</string>
     <string name="background_button">Enable Background Reading</string>
+    <string name="title_activity_main_menu">Sensor Examples</string>
 
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="overview">Overview</string>
+    <string name="overview_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est. </string>
+    <string name="overview_icon">Overview Icon</string>
+    <string name="sensor">Sensor</string>
+    <string name="sensor_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est.</string>
+    <string name="augreality">Augmented Reality</string>
+    <string name="augreality_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est.</string>
+    <string name="activity">Activity Recognition</string>
+    <string name="activity_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est.</string>
+    <string name="contextcomp">Contextual Computing</string>
+    <string name="contextcomp_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est.</string>
 </resources>
