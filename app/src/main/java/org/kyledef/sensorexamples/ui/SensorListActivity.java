@@ -6,16 +6,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
+import org.kyledef.sensorexamples.BaseActivity;
 import org.kyledef.sensorexamples.R;
 import org.kyledef.sensorexamples.model.DBHelper;
 import org.kyledef.sensorexamples.utils.PrefUtils;
 import org.kyledef.sensorexamples.utils.SensorFactory;
 
-public class SensorListActivity extends FragmentActivity
-        implements SensorListFragment.Callbacks {
+public class SensorListActivity extends BaseActivity implements SensorListFragment.Callbacks {
 
     private boolean mTwoPane = false;
     public static final String ACTIVITY_TAG = "SensorListActivity";
@@ -41,6 +40,8 @@ public class SensorListActivity extends FragmentActivity
                     .findFragmentById(R.id.sensor_list))
                     .setActivateOnItemClick(true);
         }
+
+        this.setUpNavDrawer();
     }
 
     /**

@@ -1,23 +1,8 @@
 package org.kyledef.sensorexamples.ui;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.kyledef.sensorexamples.BaseActivity;
@@ -44,7 +29,7 @@ public class MainMenu extends BaseActivity {
 
     public void sensors(View v){
         Toast.makeText(this, "Selected Sensors", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, MainMenu.class));
+        startActivity(new Intent(this, SensorListActivity.class));
     }
 
     public void augReality(View v){
