@@ -7,12 +7,25 @@
     android:layout_height="match_parent"
     tools:context="org.kyledef.sensorexamples.ui.MainMenu">
 
-    <fragment
-        android:layout_height="match_parent"
-        android:id="@+id/beyondarFragment"
-        android:name="com.beyondar.android.fragment.BeyondarFragmentSupport"
+    <FrameLayout
         android:layout_width="match_parent"
-        />
+        android:layout_height="match_parent">
+
+        <fragment
+            android:layout_height="match_parent"
+            android:id="@+id/beyondarFragment"
+            android:name="com.beyondar.android.fragment.BeyondarFragmentSupport"
+            android:layout_width="match_parent"
+            />
+
+        <Button
+            android:id="@+id/showMapButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Map"
+            android:gravity="bottom|center_horizontal" />
+
+        </FrameLayout>
 
 
     <fragment android:id="@+id/navigation_drawer"

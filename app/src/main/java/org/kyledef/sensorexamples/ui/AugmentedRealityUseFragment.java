@@ -1,7 +1,11 @@
 package org.kyledef.sensorexamples.ui;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.beyondar.android.fragment.BeyondarFragmentSupport;
@@ -14,17 +18,14 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 
 import org.kyledef.sensorexamples.R;
+import org.kyledef.sensorexamples.utils.ARHelper;
 
-import java.util.ArrayList;
-
-/**
- * Created by kyle on 2/22/15.
- */
-public class AugmentedRealityUseFragment extends BaseActivity implements GoogleApiClient.ConnectionCallbacks,  GoogleApiClient.OnConnectionFailedListener,OnClickBeyondarObjectListener {
+public class AugmentedRealityUseFragment extends BaseActivity implements View.OnClickListener {
 
     private BeyondarFragmentSupport mBeyondarFragment;
     private World world;
     private GoogleApiClient client;
+    private Button mShowMap;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -32,60 +33,25 @@ public class AugmentedRealityUseFragment extends BaseActivity implements GoogleA
         setContentView(R.layout.fragment_augmented_reality_use);
         mBeyondarFragment = (BeyondarFragmentSupport)getSupportFragmentManager().findFragmentById(R.id.beyondarFragment);
 
-        if (this.mBeyondarFragment != null)
-            mBeyondarFragment.setOnClickBeyondarObjectListener(this);
-        else
+        if (this.mBeyondarFragment != null) {
+            world = ARHelper.createDefaultWorld(this);
+
+            mBeyondarFragment.setWorld(world);
+            mBeyondarFragment.showFPS(true);
+
+            mShowMap = (Button)findViewById(R.id.showMapButton);
+            if (mShowMap != null)mShowMap.setOnClickListener(this);
+
+        }else
             Toast.makeText(this, "Unable to find fragment", Toast.LENGTH_SHORT).show();
-
-        pullWorld();
-    }
-
-
-    public void pullWorld(){
-        world = new World(this);
-//        world.setDefaultBitmap(R.drawable.gps_not_fixed);
-
-//        https://developer.android.com/training/location/retrieve-current.
-        client = (new GoogleApiClient.Builder(this))
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API)
-                .build();
     }
 
     @Override
-    public void onConnected(Bundle bundle) {
-        Toast.makeText(this, "Connection connected", Toast.LENGTH_SHORT).show();
-
-        Location mLocation = LocationServices.FusedLocationApi.getLastLocation(client);
-        if (mLocation != null){
-            world.setGeoPosition(mLocation.getLatitude(), mLocation.getLongitude());
-
-            GeoObject [] objArrs = new GeoObject[10];
-            for( int i = 0; i < objArrs.length; i++){
-                GeoObject obj = new GeoObject();
-                obj.setImageResource(R.drawable.gps_not_fixed);
-                obj.setGeoPosition(mLocation.getLatitude(), mLocation.getLongitude());
-                obj.setName("OBJ-"+i);
-                world.addBeyondarObject(obj);
-            }
+    public void onClick(View view) {
+        if (view == this.mShowMap) {
+            Toast.makeText(this, "Selected the Show Map Button", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, GoogleMapActivity.class);
+            startActivity(i);
         }
-        if (this.mBeyondarFragment != null)
-            this.mBeyondarFragment.setWorld(world);
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
-    }
-
-    @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-
-    }
-
-    @Override
-    public void onClickBeyondarObject(ArrayList<BeyondarObject> beyondarObjects) {
-        Toast.makeText(this, "Clicked on: " + beyondarObjects.get(0).getName(), Toast.LENGTH_LONG).show();
     }
 }
