@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
-import org.kyledef.sensorexamples.BaseActivity;
 import org.kyledef.sensorexamples.R;
 import org.kyledef.sensorexamples.model.DBHelper;
 import org.kyledef.sensorexamples.utils.PrefUtils;

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import org.kyledef.sensorexamples.BaseActivity;
 import org.kyledef.sensorexamples.R;
 
 public class MainMenu extends BaseActivity {
@@ -34,6 +33,7 @@ public class MainMenu extends BaseActivity {
 
     public void augReality(View v){
         Toast.makeText(this, "Selected Augmented Reality", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, AugmentedRealityMain.class));
     }
 
     public void activity(View v){

@@ -1,0 +1,85 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="org.kyledef.sensorexamples.ui.AugmentedRealityFragment">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/aug_control_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp">
+
+        <LinearLayout android:orientation="vertical"
+            android:id="@+id/control_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/action_header"
+                android:layout_width="fill_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:maxLines="1"
+                android:textIsSelectable="false"
+                tools:context=".SensorDetailFragment"
+                android:textStyle="bold|italic"
+                android:text="@string/action_header" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFCC00"/>
+
+            <LinearLayout android:orientation="vertical"
+                android:id="@+id/action_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_button"
+                    android:id="@+id/launch_button"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/background_button"
+                    android:id="@+id/bck_btn_lbl"
+                    android:layout_gravity="center_horizontal" />
+
+                <ToggleButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/background_button"
+                    android:id="@+id/background_button"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

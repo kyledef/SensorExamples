@@ -1,4 +1,4 @@
-package org.kyledef.sensorexamples;
+package org.kyledef.sensorexamples.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.widget.Toast;
 
+import org.kyledef.sensorexamples.R;
 import org.kyledef.sensorexamples.ui.MainMenu;
 import org.kyledef.sensorexamples.ui.MainMenuFragment;
 import org.kyledef.sensorexamples.ui.NavigationDrawerFragment;
@@ -39,13 +40,13 @@ public class BaseActivity extends ActionBarActivity  implements NavigationDrawer
         Intent i = null;
         switch (position){
             case 0:
-                i = new Intent(this, MainMenu.class);
+                i = new Intent(this, MainMenu.class);;
                 break;
             case 1:
                 i = new Intent(this, SensorListActivity.class);
                 break;
             case 2:
-                Toast.makeText(this, "Augmented Reality not yet available", Toast.LENGTH_SHORT).show();
+                i = new Intent(this, AugmentedRealityMain.class);
                 break;
             case 3:
                 Toast.makeText(this, "Activity Recognition not yet available", Toast.LENGTH_SHORT).show();

@@ -43,4 +43,6 @@
     <string name="activity_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est.</string>
     <string name="contextcomp">Contextual Computing</string>
     <string name="contextcomp_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta turpis ornare, pretium nunc vel, feugiat erat. Fusce eget vestibulum nisi. Cras in porttitor velit, at imperdiet est.</string>
+    <string name="title_activity_augmented_reality_main">AugmentedRealityMain</string>
+    <string name="hello_world">Hello world!</string>
 </resources>
