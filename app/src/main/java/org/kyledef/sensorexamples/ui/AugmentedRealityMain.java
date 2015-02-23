@@ -1,8 +1,11 @@
 package org.kyledef.sensorexamples.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import org.kyledef.sensorexamples.R;
 
@@ -11,16 +14,17 @@ public class AugmentedRealityMain extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_augmented_reality_main);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.container, new AugmentedRealityFragment())
-                    .commit();
-        }
-
         this.setUpNavDrawer();
+    }
+
+    public void launchCamera(View v){
+        Toast.makeText(this, "Launching Camera for View Augmented Reality Actions", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, AugmentedRealityUseFragment.class));
+    }
+
+    public void viewListTraces(View v){
+        Toast.makeText(this, "Launching View for listing traces", Toast.LENGTH_SHORT).show();
     }
 
     @Override

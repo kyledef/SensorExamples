@@ -52,6 +52,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.AugmentedRealityUseFragment"
+            android:label="Augmented Reality Use"
+            android:parentActivityName=".ui.MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.kyledef.sensorexamples.ui.MainMenu" />
+        </activity>
+        <activity
             android:name=".ui.AugmentedRealityMain"
             android:label="@string/title_activity_augmented_reality_main"
             android:parentActivityName=".ui.MainMenu" >

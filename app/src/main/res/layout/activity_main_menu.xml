@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="org.kyledef.sensorexamples.ui.MainMenu">
 
-    <FrameLayout android:id="@+id/container"
+    <FrameLayout android:id="@+id/aug_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

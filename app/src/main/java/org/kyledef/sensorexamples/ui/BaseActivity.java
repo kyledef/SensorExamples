@@ -9,10 +9,6 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import org.kyledef.sensorexamples.R;
-import org.kyledef.sensorexamples.ui.MainMenu;
-import org.kyledef.sensorexamples.ui.MainMenuFragment;
-import org.kyledef.sensorexamples.ui.NavigationDrawerFragment;
-import org.kyledef.sensorexamples.ui.SensorListActivity;
 
 /**
  * Created by kyle on 2/22/15.
@@ -67,7 +63,6 @@ public class BaseActivity extends ActionBarActivity  implements NavigationDrawer
 
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
-//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }

@@ -16,7 +16,7 @@ public class MainMenu extends BaseActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.container, new MainMenuFragment())
+                .replace(R.id.aug_container, new MainMenuFragment())
                 .commit();
 
         this.setUpNavDrawer();
